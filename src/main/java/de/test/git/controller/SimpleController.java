@@ -21,5 +21,17 @@ public class SimpleController {
     private double calculate(int x, float y) {
         return (double) x * y;
     }
+    public int useless() {
+        int a = 1;
+        int b = 1;
+        int c = 1;
+        int d = 1;
+        int e = 1;
+        for (int i = 0; i < 90; i++) {
+            d = 0;
+        }
 
+        return a + b + c;
+    }
 }
+
