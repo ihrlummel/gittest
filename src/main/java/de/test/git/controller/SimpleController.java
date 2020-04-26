@@ -8,12 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class SimpleController {
 
-	@Value("${spring.application.name}")
+    @Value("${spring.application.name}")
     String appName;
- 
+
     @GetMapping("/")
     public String homePage(Model model) {
-        model.addAttribute("appName", appName);
-        return "home";
+        model.addAttribute("ApplikationsName", appName);
+        double p  = calculate(7, 4.9f);
+        return "zuhause " + p;
     }
+
+    private double calculate(int x, float y) {
+        return (double) x * y;
+    }
+
 }
