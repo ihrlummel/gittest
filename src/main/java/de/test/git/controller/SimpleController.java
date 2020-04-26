@@ -13,10 +13,14 @@ public class SimpleController {
 
     @GetMapping("/")
     public String homePage(Model model) {
-        model.addAttribute("arsch", appName);
-        return "pimmel";
+        model.addAttribute("ApplikationsName", appName);
+        double p  = calculate(7, 4.9f);
+        return "zuhause " + p;
     }
 
+    private double calculate(int x, float y) {
+        return (double) x * y;
+    }
     public int useless() {
         int a = 1;
         int b = 1;
@@ -30,3 +34,4 @@ public class SimpleController {
         return a + b + c;
     }
 }
+
